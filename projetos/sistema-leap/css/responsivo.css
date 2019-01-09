@@ -1,0 +1,102 @@
+@media screen and (max-width:871px){
+    .order1{
+      order: 1;
+    }
+    .order2{
+      order: 3;
+    }
+    .order3{
+      order: 2;
+    }
+    .topo{
+        background: rgba(255,255,255,1);
+        background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.83) 50%, rgba(255,255,255,0.83) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(50%, rgba(255,255,255,1)), color-stop(50%, rgba(255,255,255,0.83)), color-stop(100%, rgba(255,255,255,0.83)));
+        background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.83) 50%, rgba(255,255,255,0.83) 100%);
+        background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.83) 50%, rgba(255,255,255,0.83) 100%);
+        background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.83) 50%, rgba(255,255,255,0.83) 100%);
+        background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.83) 50%, rgba(255,255,255,0.83) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+    }
+    #toolbar {
+        margin: 8px auto auto; margin: 0.5rem auto auto;
+    }
+    .nav {
+        top: 90px;
+        height: calc(100vh - 122px);
+    }
+    .container-camadas {
+        height: calc(100vh - 122px);
+    }
+    .teste {width: 100%; height: calc(50vh - 61px); overflow-y: auto; overflow-x: hidden;}
+    .teste2 {width: 100%; height: calc(50vh - 61px); overflow-y: auto; overflow-x: hidden;}
+
+    .logo {
+        margin-top: 8px; margin-top: 0.5rem;
+    }
+  }
+
+  @media screen and (max-width:681px){
+    .order1{
+      order: 1;
+    }
+    .order2{
+      order: 2;
+    }
+    .order3{
+      order: 3;
+    }
+    .topo{
+        background-color: rgba(255, 255, 255, 1);
+    }
+    #toolbar {
+        display: none;
+    }
+    .nav {
+        top: 46px;
+        height: calc(100vh - 78px);
+    }
+    .container-camadas {
+        height: calc(100vh - 78px);
+    }
+    .teste {width: 100%; height: calc(50vh - 39px); overflow-y: auto; overflow-x: hidden;}
+    .teste2 {width: 100%; height: calc(50vh - 39px); overflow-y: auto; overflow-x: hidden;}
+
+    .seletor {
+        display: block;
+    }
+    .nav-toggle {
+        top: 0;
+    }
+  }
+
+  @media screen and (max-width:470px){
+    .logo {
+        display: none;
+    }
+    .logo.desenvolvedor {
+        display: none;
+    }
+    .logo-responsivo.logo-responsivo {
+        display: block;
+        max-height: 28px;
+        /* margin-right: 44px; margin-right: 2.75rem; */
+        margin-right: -26px;
+    }
+    .janela {
+        display: none;
+    }
+    .logo-responsivo.logo-responsivo.some {
+        display: none;
+    }
+  }
+
+@media screen and (max-height:495px){
+    .item-camada {
+        flex: 1;
+    }
+    .item-camada.selecionadas {
+        min-height: unset;
+        max-height: unset;
+    }
+}

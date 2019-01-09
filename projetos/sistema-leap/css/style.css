@@ -1,0 +1,112 @@
+@viewport{ width: device-width;}
+
+/* Fonte oficial do projeto Material Design */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700');
+
+:root {font-size:16px;}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* position: relative; */
+}
+
+::-moz-selection {
+    color: #fff;
+    background: #28679d;
+}
+::selection {
+    color: #fff;
+    background: #28679d;
+}
+
+html { 
+	width:100%; 
+	height:100%; 
+	overflow: hidden;
+}
+body { 
+	width:100%; 
+	height:100%; 
+    overflow: hidden;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+/* Não deixa o usuário seleciona o objeto com essa classe */
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+/* Setup padrão dos ícones Material */
+.material-icons {
+    color: #999;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; font-size: 1.5rem;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+    line-height: 0;
+}
+
+.footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 32px;
+    background-color: #ddd;
+    z-index: 1;
+}
+
+.clearfix {
+    zoom: 1; /* clearfix:fix browsers antigos */
+}
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+.clearfix::after {
+    clear: both;
+}
+
+/* ∞∞ form elements ∞∞ */
+/* button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  background: transparent;
+	outline: none;
+	border: none;
+	border-radius: 0;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+			appearance: none;
+} */

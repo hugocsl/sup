@@ -1,0 +1,474 @@
+.nav {
+  width: 320px;
+  position: fixed;
+  top: 46px;
+  bottom: 0;
+  height: calc(100vh - 78px);
+  -webkit-transform: translateX(-100%);
+     -moz-transform: translateX(-100%);
+       -o-transform: translateX(-100%);
+          transform: translateX(-100%);
+  background: #fff;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  z-index: 2;
+  border: none;
+  border-right: 1px solid #666;
+}
+
+.container-camadas {
+  height: calc(100vh - 78px);
+}
+.container-camadas.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+.item-camada {
+  background: #fff;
+  overflow: hidden;
+  overflow-y: auto;
+  /*flex: 1;  Removendo a class=flex:1 o tamanho das áreas fica dinâmico, mas o scroll fica BUGADO!   */
+}
+.item-camada.selecionadas {
+  min-height: 25vh;
+  max-height: 50vh;
+}
+
+.layer-pai {
+  background: #fff;
+  position: relative;
+  min-height: 40px;
+  padding: 8px 0 0 8px; padding: 0.5rem 0 0 0.5rem;
+  margin: 1px 0;
+}
+.layer-pai i{
+  color: #999;
+  cursor: pointer;
+  border-radius: 12px; border-radius: 0.75rem;
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+	-o-transition: all 250ms ease-in-out;
+	transition: all 250ms ease-in-out;
+}
+.layer-pai span{
+  color: #999;
+  font-size: 14px; font-size: 0.875rem; 
+  position: relative;
+  top: -6px; top: -0.375rem;
+  pointer-events: none;
+}
+.layer-pai.pessoas i, .layer-pai.pessoas span{
+  color: #06B900;
+}
+.layer-pai.terra i, .layer-pai.terra span{
+  color: #5D01F1;
+}
+.layer-pai.infra i, .layer-pai.infra span{
+  color: #FF8800;
+}
+.layer-pai.dados i, .layer-pai.dados span{
+  color: #e607cb;
+}
+.layer-pai label{
+  position: absolute;
+  right: 0;
+}
+
+.item-barra {
+  background: #0078e8;
+  position: relative;
+  min-height: 50px;
+  padding: 16px 0 0 8px; padding: 1rem 0 0 0.5rem;
+  margin: 0 0 1px; margin: 0 0 0.0625rem;
+}
+.item-barra::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 0;
+}
+.item-barra i{
+  color: #fff;
+  cursor: pointer;
+  border-radius: 12px; border-radius: 0.75rem;
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+	-o-transition: all 250ms ease-in-out;
+	transition: all 250ms ease-in-out;
+}
+.item-barra i:hover, .item-layer i:hover, .item-tree i:hover, .layer-pai i:hover{
+  border-radius: 12px; border-radius: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+	-o-transform: scale(1);
+  transform: scale(1);
+}
+.item-barra i.clear {
+  position: absolute;
+  right: 8px; right: 0.5rem;
+  cursor: pointer;
+  font-size: 22px; font-size: 1.375rem;
+  padding: 2px; padding: 0.125rem;
+}
+.item-barra i.clear:active, .item-layer i:active, .item-tree i:active, .layer-pai i:active{
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+	-o-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition: all 10ms ease-in-out;
+  -moz-transition: all 10ms ease-in-out;
+  -o-transition: all 10ms ease-in-out;
+  transition: all 10ms ease-in-out;
+}
+.item-barra span{
+  color: #fff;
+  font-size: 16px; font-size: 1rem;
+  position: relative;
+  top: -6px; top: -0.375rem;
+  pointer-events: none;
+}
+
+.item-tree{
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  width: calc(100% - 1px);
+  position: relative;
+  padding: 6px 0; padding: 0.375rem 0;
+  background-color: #fff;
+  border: none;
+  border: 1px solid #fff;
+  margin-left: 1px;
+  cursor: default;
+}
+.item-tree .aselfie{
+  align-self: center; /* alinha os itens na vertical dentro do container */
+}
+.item-tree .aselfie.left{
+  width: 100%; /* alinhamento do texto a esquerda precisa de largura */
+}
+.item-tree:hover{
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+.item-tree span {
+  font-size: 12px; font-size: 0.75rem; 
+  line-height: 16px; line-height: 1rem;
+  position: relative;
+  top: -2px; top: -0.125rem;
+}
+.item-tree a{
+  display: inline-block;
+}
+.item-tree a i:hover{
+  color: black;
+}
+.item-tree i {
+  cursor: pointer;
+  margin: 0 4px; margin: 0 0.25rem;
+  border-radius: 12px; border-radius: 0.75rem;
+  font-size: 22px; font-size: 1.375rem;
+  padding: 2px; padding: 0.125rem;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.item-layer{
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  width: calc(100% - 1px);
+  position: relative;
+  padding: 6px 0; padding: 0.375rem 0;
+  background-color: #fff;
+  border: none;
+  border: 1px solid #fff;
+  margin-left: 1px;
+  cursor: ns-resize; /* estilo do cursos pode se o "cursor: move;" também */
+}
+.item-layer .aselfie{
+  align-self: center; /* alinha os itens na vertical dentro do container */
+}
+
+.item-layer .aselfie.left{
+  width: 100%; /* alinhamento do texto a esquerda precisa de largura */
+}
+
+.item-layer:hover{
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+.item-layer::before{
+  content: '';
+  position: absolute;
+  width: 4px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: auto;
+  background-color: transparent;
+}
+.item-layer.pessoas::before{
+  background-color: #06B900;
+}
+.item-layer.terra::before{
+  background-color: #5D01F1;
+}
+.item-layer.infra::before{
+  background-color: #FF8800;
+}
+.item-layer.dados::before{
+  background-color: #e607cb;
+}
+
+.item-layer span {
+  font-size: 12px; font-size: 0.75rem; 
+  line-height: 16px; line-height: 1rem;
+  position: relative;
+  top: -2px; top: -0.125rem;
+}
+.item-layer a{
+  display: inline-block;
+}
+.item-layer a i:hover{
+  color: black;
+}
+.item-layer i {
+  cursor: pointer;
+  margin-left: 8px; margin-left: 0.5rem;
+  margin-right: 4px; margin-right: 0.25rem;
+  border-radius: 12px; border-radius: 0.75rem;
+  font-size: 22px; font-size: 1.375rem;
+  padding: 2px; padding: 0.125rem;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.item-layer i.clear {
+  margin: 0;
+  margin-right: 6px; margin-right: 0.375rem;
+}
+ul.drag-item-layer li{
+  display: block;
+}
+ul.drag-item-layer li:active{
+  box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 10ms ease-in-out;
+  -moz-transition: all 10ms ease-in-out;
+  -o-transition: all 10ms ease-in-out;
+  transition: all 10ms ease-in-out;
+}
+
+.box{
+  -webkit-transform:  rotate(0deg) ;
+  -moz-transform:  rotate(0deg) ;
+	-o-transform:  rotate(0deg) ;
+  transform: rotate(0deg) ;
+}
+.box.on {
+	-webkit-transform:  rotate(180deg) ;
+	-moz-transform:  rotate(180deg) ;
+	-o-transform:  rotate(180deg) ;
+	transform: rotate(180deg) ;
+	-webkit-transition: all 150ms ease-in-out;
+	-moz-transition: all 150ms ease-in-out;
+	-o-transition: all 150ms ease-in-out;
+	transition: all 150ms ease-in-out;
+}
+
+.scrolly {margin-right: 1px !important;} /* debug da margim do scroll */
+
+
+/* .teste {width: 100%; height: calc(50vh - 39px); overflow-y: auto; overflow-x: hidden;}
+.teste2 {width: 100%; height: calc(50vh - 39px); overflow-y: auto; overflow-x: hidden; padding: 16px;} */
+
+
+.check-box{
+  cursor: pointer;
+}
+.check-box input[type="checkbox"] {
+  display: none; 
+}
+.check-box input[type="checkbox"] + .label-text::before {
+  font-family: 'Material Icons';
+  content: 'check_box_outline_blank';
+  padding: 2px; padding: 0.125rem;
+  border-radius: 12px; border-radius: 0.75rem;
+  font-size: 22px; font-size: 1.375rem;
+  margin: auto 6px auto 4px; margin: auto 0.375rem auto 0.25rem;
+  color: #999;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  display: inline-block;
+}
+.check-box input[type="checkbox"] + .label-text:hover::before {
+  color: black;
+  border-radius: 12px; border-radius: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.check-box input[type="checkbox"]:checked + .label-text.pessoas::before {
+  content: 'check_box';
+  color: #06B900;
+  -webkit-animation: tick 150ms ease-in;
+  -moz-animation: tick 150ms ease-in;
+  animation: tick 150ms ease-in;
+}
+.check-box input[type="checkbox"]:checked + .label-text.terra::before {
+  content: 'check_box';
+  color: #5D01F1;
+  -webkit-animation: tick 150ms ease-in;
+  -moz-animation: tick 150ms ease-in;
+  animation: tick 150ms ease-in;
+}
+.check-box input[type="checkbox"]:checked + .label-text.infra::before {
+  content: 'check_box';
+  color: #FF8800;
+  -webkit-animation: tick 150ms ease-in;
+  -moz-animation: tick 150ms ease-in;
+  animation: tick 150ms ease-in;
+}
+.check-box input[type="checkbox"]:checked + .label-text.dados::before {
+  content: 'check_box';
+  color: #e607cb;
+  -webkit-animation: tick 150ms ease-in;
+  -moz-animation: tick 150ms ease-in;
+  animation: tick 150ms ease-in;
+}
+@-webkit-keyframes tick {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.nav-toggle {
+  position: absolute;
+  left: 100%; 
+  top: 32px;
+  padding: 8px; padding: 0.5rem;
+  padding-right: 12px; padding-right: 0.75rem;
+  background: #fff;
+  cursor: pointer;
+  line-height: 0;
+  border: 1px solid #666;
+  border-left-color: #fff;
+}
+.nav-toggle i{
+  font-size: 32px; font-size: 2rem;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.nav-toggle:hover i{
+  color: black;
+}
+
+[id='nav-toggle'] {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  opacity: 0;
+}
+.nav-toggle::after {
+  content: '';
+  background: #0078e8;
+  position: absolute;
+  height: 48px;
+  width: 4px;
+  right: 0;
+  top: 0;
+}
+
+[id='nav-toggle']:checked ~ .nav {
+  -webkit-transform: translateX(0);
+     -moz-transform: translateX(0);
+       -o-transform: translateX(0);
+          transform: translateX(0);
+}
+
+[id='nav-toggle']:checked ~ .nav > .nav-toggle i {
+  color: black;
+}
+
+/**
+ * Fixing a bug in Android <= 4.1.2
+ * See: http://timpietrusky.com/advanced-checkbox-hack
+ * Beware, can be costly: https://codepen.io/HugoGiraudel/details/jPOREG#comment-id-89799
+ */
+body {
+  -webkit-animation: bugfix infinite 1s;
+  -moz-animation: bugfix infinite 1s;
+  animation: bugfix infinite 1s;
+}
+@-webkit-keyframes bugfix {
+  to {
+    padding: 0;
+  }
+}
+@keyframes bugfix {
+  to {
+    padding: 0;
+  }
+}
+/**
+ * Take care of small screens
+ */
+@media screen and (max-width: 370px) {
+  .nav {
+    width: calc(100% - 50px);
+  }
+  [id='nav-toggle']:checked ~ .nav > .nav-toggle {
+    left: auto;
+    right: 0;
+    top: 0;
+  }
+  .nav-toggle {
+    border-left-color: #666;
+  }
+}
+/**
+ * Provide a fallback for browsers that do not support CSS transforms
+ */
+.no-csstransforms .nav {
+  left: -320px;
+}
+.no-csstransforms [id='nav-toggle']:checked ~ .nav {
+  left: 0;
+}

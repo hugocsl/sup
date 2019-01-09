@@ -1,0 +1,142 @@
+.topo{
+    width: 100%;
+    min-height: 46px;
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+    padding-left: 8px; padding-left: 0.5rem;
+    border-bottom: 2px solid #666;
+    z-index: 9;
+    position: fixed; /* dubug pro mapa não sobrepor o topo */
+}
+.topo div {
+    line-height: 0;
+}
+
+.order1 {
+	order: 1;
+}
+.order2 {
+	order: 2;
+}
+.order3 {
+	order: 3;
+}
+
+.logo {
+    max-height: 28px; max-height: 1.75rem;
+    padding: 0;
+    margin: 0;
+}
+.logo-responsivo {
+    display: none;
+}
+.logo.desenvolvedor {
+    margin-right: 44px; margin-right: 2.75rem;
+}
+
+.material-icons.icon-flip {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+#toolbar ul li {
+    list-style: none;
+    float: left;
+    padding: 10px 2px; padding: 0.625rem 0.125rem;
+    margin: 0;
+    line-height: 0;
+}
+#toolbar ul li a{
+    display: block; 
+    position: relative;
+}
+#toolbar ul li a::before{
+    content: '';
+    position: absolute;
+    background: #D80000;
+    width: 24px; width: 1.5rem;
+    height: 0;
+    top: -10px; top: -0.625rem;
+    -webkit-transition: all 60ms ease-in-out;
+    -o-transition: all 60ms ease-in-out;
+    transition: all 60ms ease-in-out;
+}
+#toolbar ul li a:hover::before{
+    content: '';
+    position: absolute;
+    background: #D80000;
+    width: 24px; width: 1.5rem;
+    height: 4px; height: 0.25rem;
+    top: -10px; top: -0.625rem;
+}
+#toolbar ul li a:hover i{
+    color: #000;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+/* Classe ativa */
+#toolbar ul li a.active i{
+    color: #000;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+#toolbar ul li a.active::before{
+    content: '';
+    position: absolute;
+    background: #D80000;
+    width: 24px; width: 1.5rem;
+    height: 4px;
+    top: -10px; top: -0.625rem;
+    -webkit-transition: all 60ms ease-in-out;
+    -o-transition: all 60ms ease-in-out;
+    transition: all 60ms ease-in-out;
+}
+/* ----- Fim Ativo ------- */
+
+#toolbar .tool-spacer{
+    padding: 6px 6px 0; padding: 0.375rem 0.375rem 0;
+}
+#toolbar .tool-spacer .spacer{
+    display: block;
+    width: 1px;
+    background: #ccc;
+    height: 32px;
+}
+
+.seletor {
+    display: none;
+}
+/* .seletor select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+         outline: none;
+}
+.seletor select > option {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+         outline: none;
+} */

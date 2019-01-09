@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <!-- Gerador de FavIcons - http://realfavicongenerator.net/ -->
+    <link rel="shortcut icon" type="image/x-icon" href="fav/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png" />
+    <link rel="manifest" href="fav/manifest.json" />
+    <link rel="mask-icon" href="fav/safari-pinned-tab.svg" color=" #ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Fallback Flex browsers antigos -->
+    <script src="./js/flexibility.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <link rel="stylesheet" href="./css/topo.css" type="text/css" />
+    <link rel="stylesheet" href="./css/usermenu.css" type="text/css" />
+    <link rel="stylesheet" href="./css/camadas.css" type="text/css" />
+    <link rel="stylesheet" href="./css/droptools.css" type="text/css" />
+    <link rel="stylesheet" href="./css/janela.css" type="text/css" />
+    <link rel="stylesheet" href="./css/responsivo.css" type="text/css" />
+    <!-- Google Maps -->
+    <link rel="stylesheet" href="./css/googlemaps.css" type="text/css" />
+
+    <!-- Open Street Maps
+    <link rel='stylesheet prefetch' href='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css'>
+    <link rel="stylesheet"  href="./css/mapa.css" type="text/css" />-->
+
+    <!-- Fonte Iconográfica oficial do projeto Material Design -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <title>Aplicativo</title>
+
+    <style>
+    </style>
+
+</head>
+<body>
+
+    <!-- Início TOPO -->
+    <div data-style="display: flex;" class="topo">
+        <div class="order1">
+            <img class="logo" src="./img/logo_cliente.svg" alt="logo">
+            <!-- Logo responsivo para mobile -->
+            <img class="logo-responsivo" src="./img/simbolo_cliente.svg" alt="logo">
+        </div>
+        <div id="toolbar" class="order2">
+            <ul>
+                <li><a class="active" href="#" title="Visão completa"><i class="material-icons">public</i></a></li>
+                <li><a href="#" title="Mover mapa"><i class="material-icons">pan_tool</i></a></li>
+                <li><a href="#" title="Zoom anterior"><i class="material-icons">search</i></a></li>
+                <li><a href="#" title="Próximo zoom"><i class="material-icons icon-flip">search</i></a></li>
+                <li><a href="#" title="Zoom de janela"><i class="material-icons">zoom_in</i></a></li>
+                <li><a href="#" title="Zoom para cidade"><i class="material-icons">explore</i></a></li>
+                <li class="tool-spacer"><div class="spacer"></div></li>
+                <li><a href="#" title="Identificação feição"><i class="material-icons">info</i></a></li>
+                <li><a href="#" title="Legenda"><i class="material-icons">format_list_bulleted</i></a></li>
+                <li><a href="#" title="Transparência"><i class="material-icons">flip</i></a></li>
+                <li><a href="#" title="Metadados"><i class="material-icons">find_in_page</i></a></li>
+                <li class="tool-spacer"><div class="spacer"></div></li>
+                <li><a href="#" title="Medir distância"><i class="material-icons">straighten</i></a></li>
+                <li><a href="#" title="Medir área"><i class="material-icons">transform</i></a></li>
+                <li><a href="#" title="Desenhar ponto"><i class="material-icons">edit_location</i></a></li>
+                <li><a href="#" title="Desenhar linha"><i class="material-icons">flip_to_front</i></a></li>
+                <li><a href="#" title="Desenha polígono"><i class="material-icons">flip_to_back</i></a></li>
+                <li><a href="#" title="Limpar desenho"><i class="material-icons">remove_circle</i></a></li>
+                <li><a href="#" title="Download de camada"><i class="material-icons">file_download</i></a></li>
+                <li><a href="#" title="Upload de camada"><i class="material-icons">file_upload</i></a></li>
+                <li class="tool-spacer"><div class="spacer"></div></li>
+                <li><a href="#" title="Bookmark"><i class="material-icons">room</i></a></li>
+                <li><a href="#" title="Documento"><i class="material-icons">insert_drive_file</i></a></li>
+                <li><a href="#" title="Estrutura de documento"><i class="material-icons">folder</i></a></li>
+                <li><a href="#" title="Print"><i class="material-icons">print</i></a></li>
+            </ul>
+        </div>
+
+        <div class="seletor order2 tools">
+            <form>
+                <ul class="select ">
+                    <li >
+                        <input class="select_close" type="radio" name="awesomeness" id="awesomeness-close" value=""/>
+                        <span class="select_label select_label-placeholder">Selecione a Ferramenta</span>
+                    </li>
+                    <li class="select_items">
+                        <input class="select_expand" type="radio" name="awesomeness" id="awesomeness-opener"/>
+                        <label class="select_closeLabel" for="awesomeness-close"></label>
+    
+                        <ul class="select_options">
+                            <!-- <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-ridiculous"/>
+                                <label class="select_label" for="awesomeness-ridiculous">ridiculous</label>
+                            </li> -->
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-1"/>
+                                <label class="select_label" for="awesomeness-1">
+                                    <i class="material-icons">public</i>
+                                    <span>Visão completa</span>
+                                </label>
+                            </li>
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-2"/>
+                                <label class="select_label" for="awesomeness-2">
+                                    <i class="material-icons">pan_tool</i>
+                                    <span>Mover mapa</span>
+                                </label>
+                            </li>
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-3"/>
+                                <label class="select_label" for="awesomeness-3">
+                                    <i class="material-icons">search</i>
+                                    <span>Zoom anterior</span>
+                                </label>
+                            </li>
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-4"/>
+                                <label class="select_label" for="awesomeness-4">
+                                    <i class="material-icons icon-flip">search</i>
+                                    <span>Próximo zoom</span>
+                                </label>
+                            </li>
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-5"/>
+                                <label class="select_label" for="awesomeness-5">
+                                    <i class="material-icons">zoom_in</i>
+                                    <span>Zoom de janela</span>
+                                </label>
+                            </li>
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-6"/>
+                                <label class="select_label" for="awesomeness-6">
+                                    <i class="material-icons">explore</i>
+                                    <span>Zoom para cidade</span>
+                                </label>
+                            </li>
+
+                            <li class="spacer"></li>
+
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-7"/>
+                                <label class="select_label" for="awesomeness-7">
+                                    <i class="material-icons">info</i>
+                                    <span>Identificação feição</span>
+                                </label>
+                            </li>
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-8"/>
+                                <label class="select_label" for="awesomeness-8">
+                                    <i class="material-icons">format_list_bulleted</i>
+                                    <span>Legenda</span>
+                                </label>
+                            </li>
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-9"/>
+                                <label class="select_label" for="awesomeness-9">
+                                    <i class="material-icons">flip</i>
+                                    <span>Transparência</span>
+                                </label>
+                            </li>
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-10"/>
+                                <label class="select_label" for="awesomeness-10">
+                                    <i class="material-icons">find_in_page</i>
+                                    <span>Metadados</span>
+                                </label>
+                            </li>
+
+                            <li class="spacer"></li>
+
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-11"/>
+                                <label class="select_label" for="awesomeness-11">
+                                    <i class="material-icons">straighten</i>
+                                    <span>Medir distância</span>
+                                </label>
+                            </li>
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-12"/>
+                                <label class="select_label" for="awesomeness-12">
+                                    <i class="material-icons">transform</i>
+                                    <span>Medir área</span>
+                                </label>
+                            </li>
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-13"/>
+                                <label class="select_label" for="awesomeness-13">
+                                    <i class="material-icons">edit_location</i>
+                                    <span>Desenhar ponto</span>
+                                </label>
+                            </li>
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-14"/>
+                                <label class="select_label" for="awesomeness-14">
+                                    <i class="material-icons">flip_to_front</i>
+                                    <span>Desenhar linha</span>
+                                </label>
+                            </li>
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-15"/>
+                                <label class="select_label" for="awesomeness-15">
+                                    <i class="material-icons">flip_to_back</i>
+                                    <span>Desenha polígono</span>
+                                </label>
+                            </li>
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-16"/>
+                                <label class="select_label" for="awesomeness-16">
+                                    <i class="material-icons">remove_circle</i>
+                                    <span>Limpar desenho</span>
+                                </label>
+                            </li>
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-17"/>
+                                <label class="select_label" for="awesomeness-17">
+                                    <i class="material-icons">file_download</i>
+                                    <span>Download de camada</span>
+                                </label>
+                            </li>
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-18"/>
+                                <label class="select_label" for="awesomeness-18">
+                                    <i class="material-icons">file_upload</i>
+                                    <span>Upload de camada</span>
+                                </label>
+                            </li>
+
+                            <li class="spacer"></li>
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-19"/>
+                                <label class="select_label" for="awesomeness-19">
+                                    <i class="material-icons">room</i>
+                                    <span>Bookmark</span>
+                                </label>
+                            </li>
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-20"/>
+                                <label class="select_label" for="awesomeness-20">
+                                        <i class="material-icons">insert_drive_file</i>
+                                    <span>Documento</span>
+                                </label>
+                            </li>
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-21"/>
+                                <label class="select_label" for="awesomeness-21">
+                                    <i class="material-icons">folder</i>
+                                    <span>Estrutura de doc.</span>
+                                </label>
+                            </li>
+                            <li class="select_option">
+                                <input class="select_input" type="radio" name="awesomeness" id="awesomeness-22"/>
+                                <label class="select_label" for="awesomeness-22">
+                                    <i class="material-icons">print</i>
+                                    <span>Print</span>
+                                </label>
+                            </li>
+                        </ul>
+
+                        <label class="select_expandLabel" for="awesomeness-opener"></label>
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+        <div class="order3">
+            <img class="logo desenvolvedor" src="./img/logo_desenvolvedor.svg" alt="logo">
+            <!-- Logo responsivo para mobile -->
+            <img class="logo-responsivo desenvolvedor some" src="./img/simbolo_desenvolvedor.svg" alt="logo">
+            <div class="user-menu">
+                <a href="#"><i class="material-icons user">more_vert</i></a>
+                <div class="user-dropdown">
+                    <a href="#" class="dropdown-item"><i class="material-icons">build</i><span>Gerenciador</span></a>
+                    <a href="#" class="dropdown-item"><i class="material-icons">help_outline</i><span>Ajuda</span></a>
+                    <a href="#" class="dropdown-item"><i class="material-icons">perm_phone_msg</i><span>Suporte</span></a>
+                    <a href="#" class="dropdown-item"><i class="material-icons">power_settings_new</i><span>Sair</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIM TOPO -->
+
+    <!-- Início Camadas -->
+    <input type="checkbox" id="nav-toggle" aria-hidden="true">
+    <nav class="nav">
+
+        <section class="container-camadas flex">
+            <div class="item-barra">
+                <i class="material-icons box noselect" onclick="myFunction()" >expand_more</i>
+                <span>Camadas Disponíveis</span>
+            </div>
+            <div class="item-camada scrolly">
+                <div id="myDIV" >
+
+                    <div class="layer-pai pessoas">
+                        <i class="material-icons box noselect" onclick="myFunctionZ()" >expand_more</i>
+                        <span>Eixo Pessoas e Comunidade</span>
+                        <!-- <a href="#"><i class="material-icons clear">clear</i></a> -->
+                        <label class="check-box ">
+                            <input type="checkbox" name="btn"> 
+                            <p class="label-text pessoas"></p>
+                        </label>
+                    </div>
+                    <div id="myDIVz">
+                        <div class="item-tree">
+                            <div class="aselfie">
+                                <label class="check-box">
+                                    <input type="checkbox" name="btn"> 
+                                    <p class="label-text pessoas"></p>
+                                </label>
+                            </div>
+                            <div class="aselfie left"><span>PG17 e PG10 - Propriedades - Adesões ao 11m Plano de Ação Socioeconômica 20000</span></div>
+                            <div class="aselfie"><a href="#"><i class="material-icons">more_vert</i></a></div>
+                        </div>
+                        <div class="item-tree">
+                            <div class="aselfie">
+                                <label class="check-box">
+                                    <input type="checkbox" name="btn"> 
+                                    <p class="label-text pessoas"></p>
+                                </label>
+                            </div>
+                            <div class="aselfie left"><span>PG17 e PG10 -onômica 20000</span></div>
+                            <div class="aselfie"><a href="#"><i class="material-icons">more_vert</i></a></div>
+                        </div>
+                        <div class="item-tree">
+                            <div class="aselfie">
+                                <label class="check-box">
+                                    <input type="checkbox" name="btn"> 
+                                    <p class="label-text pessoas"></p>
+                                </label>
+                            </div>
+                            <div class="aselfie left"><span>PG17 e PG10 -onômica 20000</span></div>
+                            <div class="aselfie"><a href="#"><i class="material-icons">more_vert</i></a></div>
+                        </div>
+                        <div class="item-tree">
+                            <div class="aselfie">
+                                <label class="check-box">
+                                    <input type="checkbox" name="btn"> 
+                                    <p class="label-text pessoas"></p>
+                                </label>
+                            </div>
+                            <div class="aselfie left"><span>PG17 e PG10 -onômica 20000</span></div>
+                            <div class="aselfie"><a href="#"><i class="material-icons">more_vert</i></a></div>
+                        </div>
+                        <div class="item-tree">
+                            <div class="aselfie">
+                                <label class="check-box">
+                                    <input type="checkbox" name="btn"> 
+                                    <p class="label-text pessoas"></p>
+                                </label>
+                            </div>
+                            <div class="aselfie left"><span>PG17 e PG10 -onômica 20000</span></div>
+                            <div class="aselfie"><a href="#"><i class="material-icons">more_vert</i></a></div>
+                        </div>
+                        <div class="item-tree">
+                            <div class="aselfie">
+                                <label class="check-box">
+                                    <input type="checkbox" name="btn"> 
+                                    <p class="label-text pessoas"></p>
+                                </label>
+                            </div>
+                            <div class="aselfie left"><span>PG17 e PG10 -onômica 20000</span></div>
+                            <div class="aselfie"><a href="#"><i class="material-icons">more_vert</i></a></div>
+                        </div>
+                        <div class="item-tree">
+                            <div class="aselfie">
+                                <label class="check-box">
+                                    <input type="checkbox" name="btn"> 
+                                    <p class="label-text pessoas"></p>
+                                </label>
+                            </div>
+                            <div class="aselfie left"><span>PG17 e PG10 -onômica 20000</span></div>
+                            <div class="aselfie"><a href="#"><i class="material-icons">more_vert</i></a></div>
+                        </div>
+                    </div>
+
+
+                    <div class="layer-pai terra">
+                        <i class="material-icons box noselect" onclick="myFunctionY()" >expand_more</i>
+                        <span>Eixo Pessoas e Comunidade</span>
+                        <!-- <a href="#"><i class="material-icons clear">clear</i></a> -->
+                        <label class="check-box ">
+                            <input type="checkbox" name="btn"> 
+                            <p class="label-text terra"></p>
+                        </label>
+                    </div>
+                    <div id="myDIVy">
+                        <div class="item-tree">
+                            <div class="aselfie">
+                                <label class="check-box">
+                                    <input type="checkbox" name="btn"> 
+                                    <p class="label-text terra"></p>
+                                </label>
+                            </div>
+                            <div class="aselfie left"><span>PG17 e PG10 -onômica 20000</span></div>
+                            <div class="aselfie"><a href="#"><i class="material-icons">more_vert</i></a></div>
+                        </div>
+                    </div>
+
+                    <div class="layer-pai infra">
+                        <i class="material-icons box noselect" onclick="myFunctionW()" >expand_more</i>
+                        <span>Eixo Pessoas e Comunidade</span>
+                        <!-- <a href="#"><i class="material-icons clear">clear</i></a> -->
+                        <label class="check-box ">
+                            <input type="checkbox" name="btn"> 
+                            <p class="label-text infra"></p>
+                        </label>
+                    </div>
+                    <div id="myDIVw">
+                        <div class="item-tree">
+                            <div class="aselfie">
+                                <label class="check-box">
+                                    <input type="checkbox" name="btn"> 
+                                    <p class="label-text infra"></p>
+                                </label>
+                            </div>
+                            <div class="aselfie left"><span>PG17 e PG10 -onômica 20000</span></div>
+                            <div class="aselfie"><a href="#"><i class="material-icons">more_vert</i></a></div>
+                        </div>
+                    </div>
+
+                    <div class="layer-pai dados">
+                        <i class="material-icons box noselect" onclick="myFunctionK()" >expand_more</i>
+                        <span>Eixo Pessoas e Comunidade</span>
+                        <!-- <a href="#"><i class="material-icons clear">clear</i></a> -->
+                        <label class="check-box ">
+                            <input type="checkbox" name="btn"> 
+                            <p class="label-text dados"></p>
+                        </label>
+                    </div>
+                    <div id="myDIVk">
+                        <div class="item-tree">
+                            <div class="aselfie">
+                                <label class="check-box">
+                                    <input type="checkbox" name="btn"> 
+                                    <p class="label-text dados"></p>
+                                </label>
+                            </div>
+                            <div class="aselfie left"><span>PG17 e PG10 -onômica 20000</span></div>
+                            <div class="aselfie"><a href="#"><i class="material-icons">more_vert</i></a></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="item-barra">
+                <i class="material-icons box noselect" onclick="myFunctionX()" >expand_more</i>
+                <span>Camadas Selecionadas</span>
+                <a href="#"><i class="material-icons clear">clear</i></a>
+            </div>
+            <div class="item-camada selecionadas scrolly">
+                <div id="myDIVx">
+                    <ul id="sortable1" class="drag-item-layer droptrue js-sort-list">
+                        <li>
+                            <div class="item-layer pessoas">
+                                <div class="aselfie"><a href="#"><i class="material-icons">gps_fixed</i></a></div>
+                                <div class="aselfie left"><span>PG17 e PG10 - Propriedades - Adesões ao 11m Plano de Ação Socioeconômica 20000</span></div>
+                                <div class="aselfie"><a href="#"><i class="material-icons clear">clear</i></a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-layer terra">
+                                <div class="aselfie"><a href="#"><i class="material-icons">gps_fixed</i></a></div>
+                                <div class="aselfie left"><span>PG17 e PG10 - Propriedades - Adesões ao 11m Plano de Ação Socioeconômica 20000</span></div>
+                                <div class="aselfie"><a href="#"><i class="material-icons clear">clear</i></a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-layer infra">
+                                <div class="aselfie"><a href="#"><i class="material-icons">gps_fixed</i></a></div>
+                                <div class="aselfie left"><span>PG17 e PG10 - 20000</span></div>
+                                <div class="aselfie"><a href="#"><i class="material-icons clear">clear</i></a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-layer dados">
+                                <div class="aselfie"><a href="#"><i class="material-icons">gps_fixed</i></a></div>
+                                <div class="aselfie left"><span>PG17 e PG10 - 20000</span></div>
+                                <div class="aselfie"><a href="#"><i class="material-icons clear">clear</i></a></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <a href="#" title="Camadas"><label for="nav-toggle" class="nav-toggle" onclick><i class="material-icons">layers</i></label></a>
+    </nav>
+    <!-- FIM Camadas -->
+
+    <div class="janela">
+        <div class="topoz clearfix">
+            <div class="tit"><span>Estrutura</span></div>
+            <div class="close"><a href="#"><i class="material-icons">clear</i></a></div>
+            <!-- icone para minimizar janela se precisar -->
+            <!-- <div class="close"><a href="#"><i class="material-icons">aspect_ratio</i></a></div> -->
+        </div>
+        <div class="content winscroll clearfix">
+
+            <h2>Título da Janela</h2>
+            <div class="group">
+                <input type="text" autocomplit="off">
+                <label>Nome do campo</label>
+                <span class="bar"></span>
+            </div>
+            <ul class="win-list">
+                <li>
+                    <a href="#" title="Camadas"><i class="material-icons">insert_drive_file</i><span>Download</span></a>
+                </li>
+            </ul>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, rerum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti perferendis, natus pariatur maxime commodi alias optio porro aliquam officia doloremque.
+        </div>
+        <div class="footer-btns clearfix">
+            <div class="btn"><a class="salvar" href="#" title="salvar">salvar</a></div>
+            <div class="btn"><a class="minimizar" href="#" title="minimizar">minimizar</a></div>
+            <div class="btn"><a class="cancelar" href="#" title="cancelar">cancelar</a></div>
+            <div class="btn"><a class="off" href="#" title="cancelar">off</a></div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <!-- Mapa no BG -->
+    <div id="map-canvas"></div>
+
+    <!-- Google Maps -->
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false'></script>
+    <script src="js/googlemaps.js"></script>
+
+    <!-- Open Street View -->
+    <!-- <div id="map"></div> -->
+    <!-- <script src='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js'></script>
+    <script src="js/mapa.js"></script> -->
+
+    <!-- Scrip Menu do Usuário -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Se o link acima não funcionar o Browser busca o jQuery na pasta -->
+    <script>window.jQuery || document.write('<script src="js/3.2.1/jquery.min.js"><\/script>');</script>   
+    <!-- Drag n Drop Item Layer -->
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+    <script src="./js/dragndrop.js"></script>
+    <!-- Menu Usuário no Topo -->
+    <script src="./js/usermenu.js"></script>
+    <!-- Scroll Customizado, tb precisa do jQuery -->
+    <!-- https://github.com/inuyaksa/jquery.nicescroll -->
+    <script src="./js/jquery.nicescroll.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var nice = $("html").niceScroll();
+            $(".scrolly").niceScroll({
+                autohidemode: true, // false = Scroll sempre visivel, se True fica visivel só no auto
+                cursoropacitymin: 0, 
+                cursorcolor:"#6f6f6f",
+                cursorborder:"1px solid #3f3f3f",
+                cursorwidth:"6px",
+                background:"rgba(200,200,200,1)",
+                zindex: [99],
+                cursorborderradius:6,
+                cursoropacitymax:0.8,
+                hidecursordelay: 500, // tempo em MS pro scroll dar fadeout
+                scrollspeed: 200, // scrolling speed
+                mousescrollstep: 20 // scrolling speed with mouse wheel
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            var nice = $("html").niceScroll();
+            $(".winscroll").niceScroll({
+                autohidemode: false, // false = Scroll sempre visivel, se True fica visivel só no auto
+                cursoropacitymin: 0.4, 
+                autohidemode:'leave',
+                cursorcolor:"#6f6f6f",
+                cursorborder:"1px solid #3f3f3f",
+                cursorwidth:"8px",
+                background:"rgba(200,200,200,1)",
+                zindex: [99],
+                cursorborderradius:6,
+                cursoropacitymax:0.8,
+                hidecursordelay: 500, // tempo em MS pro scroll dar fadeout
+                scrollspeed: 200, // scrolling speed
+                mousescrollstep: 20 // scrolling speed with mouse wheel
+            });
+        });
+    </script>
+    <!-- Acordeon Camadas -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById('myDIV');
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+    </script>
+    <script>
+        function myFunctionX() {
+            var x1 = document.getElementById('myDIVx');
+            if (x1.style.display === 'none') {
+                x1.style.display = 'block';
+            } else {
+                x1.style.display = 'none';
+            }
+        }
+    </script>
+    <!-- Acordeon Layers -->
+    <script>
+        function myFunctionZ() {
+            var x2 = document.getElementById('myDIVz');
+            if (x2.style.display === 'none') {
+                x2.style.display = 'block';
+            } else {
+                x2.style.display = 'none';
+            }
+        }
+    </script>
+    <script>
+        function myFunctionY() {
+            var x2 = document.getElementById('myDIVy');
+            if (x2.style.display === 'none') {
+                x2.style.display = 'block';
+            } else {
+                x2.style.display = 'none';
+            }
+        }
+    </script>
+    <script>
+        function myFunctionW() {
+            var x2 = document.getElementById('myDIVw');
+            if (x2.style.display === 'none') {
+                x2.style.display = 'block';
+            } else {
+                x2.style.display = 'none';
+            }
+        }
+    </script>
+    <script>
+        function myFunctionK() {
+            var x5 = document.getElementById('myDIVk');
+            if (x5.style.display === 'none') {
+                x5.style.display = 'block';
+            } else {
+                x5.style.display = 'none';
+            }
+        }
+    </script>
+    <!-- Acordeon seta -->
+    <script>
+        $(function(){
+            $('.box').click(function(){
+                $(this).toggleClass('on');
+            });
+        });
+    </script>
+    <!-- Script pra setar a classe na validação do Input -->
+    <script>
+        $(document).ready(function() {
+            $('input').blur(function() {
+            if ($(this).val())
+                $(this).addClass('used');
+            else
+                $(this).removeClass('used');
+            });
+        });
+    </script>
+
+</body>
+</html>
