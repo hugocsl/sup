@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+# desabilita os mecanismos de busca de indexar essa página
